@@ -3,12 +3,12 @@
  * @Desc: Shows progress bar.
  * @Params: _upto -> upto that percentage.
  */
-function __showProgress(_upto, _cir_progress_id) {
+function __showProgress(_start, _upto, _cir_progress_id) {
 
     //Filter Percentage
     _upto = (_upto > 100) ? 100 : ((_upto < 0) ? 0 : _upto);
 
-    var _progress = 0;
+    var _progress = _start;
 
     var _cir_progress = document.getElementById(_cir_progress_id).getElementsByClassName("_cir_P_y")[0];
     var _text_percentage = document.getElementById(_cir_progress_id).getElementsByClassName("_cir_Per")[0];
